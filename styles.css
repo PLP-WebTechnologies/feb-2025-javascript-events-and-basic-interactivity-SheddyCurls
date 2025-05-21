@@ -1,0 +1,163 @@
+/* ===== Base Styles ===== */
+:root {
+    --primary: #4a6fa5;
+    --secondary: #ff7e5f;
+    --text: #333;
+    --bg: #f9f9f9;
+    --card-bg: #fff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --primary: #6d8cc7;
+    --secondary: #ff9f7f;
+    --text: #f0f0f0;
+    --bg: #222;
+    --card-bg: #333;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--primary);
+    color: white;
+}
+
+.version {
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+/* ===== Theme Toggle ===== */
+.theme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    background: var(--card-bg);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===== Counter Section ===== */
+.counter-section {
+    background: var(--card-bg);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: var(--secondary);
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== Drag & Drop Zone ===== */
+#dropZone {
+    border: 2px dashed var(--primary);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#dropZone:hover {
+    background: rgba(74, 111, 165, 0.1);
+}
+
+#fileInput {
+    display: none;
+}
+
+/* ===== To-Do List ===== */
+.todo-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+#todoInput {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#todoList {
+    list-style: none;
+    padding: 0;
+}
+
+#todoList li {
+    background: var(--card-bg);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== Form Validation ===== */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+small {
+    color: #ff4d4d;
+    display: block;
+    margin-top: 5px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .counter-section, .drag-drop-section, .todo-section, .form-section {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
